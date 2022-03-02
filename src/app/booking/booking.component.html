@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="grid">
+    <div class="row p-5">
+      <div class="col-6 offset-3">
+        <form [formGroup]="bookingForm">
+          <div class="input-group mb-3">
+            <span class="input-group-text">Date</span>
+            <input
+              type="date"
+              class="form-control"
+              formControlName="bookingDate"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">Heure</span>
+            <input
+              type="time"
+              class="form-control"
+              formControlName="bookingHour"
+            />
+          </div>
+
+          <button
+            type="button"
+            [disabled]="bookingForm.invalid"
+            class="btn btn-primary"
+            (click)="onCheckAvailability()"
+          >
+            Check availability
+          </button>
+        </form>
+
+        <div class="alert alert-success" role="alert" *ngIf="bookingMessage">
+          <p>{{ bookingMessage }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
