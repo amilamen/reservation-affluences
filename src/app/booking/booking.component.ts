@@ -27,7 +27,7 @@ export class BookingComponent implements OnInit {
   onCheckAvailability() {
     this.bookingCheckingService
       .checking({
-        resourceID: 1000,
+        resourceID: 1337,
         bookingDate: this.bookingForm.controls['bookingDate'].value,
         bookingHour: this.bookingForm.controls['bookingHour'].value,
       })
