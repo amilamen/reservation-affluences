@@ -6,5 +6,4 @@ export interface IBookingChecking {
 
 export interface IBookingCheckingRetrieve {
   available: boolean;
-  error: string;
 }
